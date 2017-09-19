@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <?php 
-	try
-    {
-    // On se connecte à MySQL
-    $bdd = new PDO('mysql:host=localhost;dbname=facturation;charset=utf8', 'pablo', 'user');
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    catch(Exception $e)
-    {
-    // En cas d'erreur, on affiche un message et on arrête tout
-          die('Erreur : '.$e->getMessage());
-    }
+include('conexion.php');
+
     $resultat = $bdd->query("SELECT * FROM factures ORDER BY date_facture DESC");
      $factuer = array();
     while ($donnees = $resultat->fetch())
@@ -46,7 +37,7 @@
 	foreach ($factuer as $row) {
 ?>
   <tr>
-    <td><a href="detailfacture.php"><?= $row['numero_facture']?></a></td>
+    <td><a href="<?= "detailfacture.php?facture=".$row['numero_facture'];?>"><?= $row['numero_facture']?></a></td>
     <td><?= $row['date_facture']?></td> 
   </tr>
  <?php

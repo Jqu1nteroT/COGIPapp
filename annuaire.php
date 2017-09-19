@@ -1,28 +1,10 @@
 <!DOCTYPE html>
 <?php
-try
-{
-// On se connecte à MySQL
-$bdd = new PDO('mysql:host=localhost;dbname=facturation;charset=utf8', 'pablo', 'user');
-$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(Exception $e)
-{
-// En cas d'erreur, on affiche un message et on arrête tout
-die('Erreur : '.$e->getMessage());
-}
-$resultat = $bdd->query('SELECT * FROM personne');
-$personne = array();
-while ($donnees = $resultat->fetch())
-{
-$personne[] = $donnees;
-}
-$resultat = $bdd->query('SELECT * FROM societes');
-$societe = array();
-while ($donnees = $resultat->fetch())
-{
-$societe[] = $donnees;
-}
+include('conexion.php');
+
+$resultat = $bdd->query('SELECT personne.*, societes.nom_societe FROM personne,societes WHERE personne.Id_societe = societes.id_societes');
+$personne = $resultat->fetchAll();
+
 ?>
 <html lang="en">
 <head>
@@ -30,7 +12,7 @@ $societe[] = $donnees;
 	<title>Annuaire</title>
 </head>
 <body>
-	<h1>Annuqire</h1>
+	<h1>Annuaire</h1>
 	<table>
 			<tr>
 				<th>Id</th>
@@ -42,22 +24,14 @@ $societe[] = $donnees;
 				foreach ($personne as $row)  {
 			?>
 			<tr>
-				<td><?= $row ['id_personne']?></td>
+				<td><a href="<?= "detailcontact.php?contact=".$row['id_personne'];?>"><?= $row ['id_personne']?></a></td>
 				<td><?= $row ['nom_personne']?></td>
 				<td><?= $row ['prenom_personne']?></td>
-				<td><?= $row ['id_societe']?></td>
+				<td><?= $row ['nom_societe']?></td>
 				<?php
 			}
 			?>
-			<?php
-				foreach ($societe as $row)  {
-			?>
-			<td><?= $row ['nom_societe']?></td>
-				<?php
-			}
-			?>
-			</tr>
-			
+			</tr>		
 		</table>
 </body>
 </html>
