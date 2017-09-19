@@ -2,7 +2,6 @@
 include('conexion.php');
 $resultat = $bdd->query("SELECT * FROM societes WHERE type = 1");
 $societe = $resultat->fetchAll();
-print_r($societe);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,16 +16,16 @@ print_r($societe);
 				<th>Nom Societe</th>
 				<th>TVA Societe</th>
 			</tr>
+			<?php
+				foreach ($societe as $row) {
+			?>
 			<tr>
-				<?php
-					foreach ($societe as $row) {
-				?>
-				<td><a href="<?= "detailsociete.php?societe=".$row['id_societe'];?>"><?= $row['nom_societe'];?></a></td>
+				<td><a href="<?= "detailsociete.php?societe=".$row['id_societes'];?>"><?= $row['nom_societe'];?></a></td>
 				<td><?= $row['tva_societe'];?></td>
-				<?php
-					}
-				?>
 			</tr>
+			<?php
+				}
+			?>
 		</table>
 	</body>
 </html>
