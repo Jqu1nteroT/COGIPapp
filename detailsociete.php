@@ -64,7 +64,7 @@ $persones = $resulta2->fetchAll();
 				<tr>
 					<th>Numero Facture</th>
 					<th>Date Facture</th>
-				</tr>
+				</tr> 
 				<?php 
 					foreach ($factures as $rx) {
 				?>
