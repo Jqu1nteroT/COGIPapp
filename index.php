@@ -8,13 +8,13 @@ while ($donnees = $resultat->fetch())
 {
 $factuer[] = $donnees;
 }
-$resultat = $bdd->query('SELECT * FROM personne');
+$resultat = $bdd->query('SELECT * FROM personne LIMIT 5');
 $personne = array();
 while ($donnees = $resultat->fetch())
 {
 $personne[] = $donnees;
 }
-$resultat = $bdd->query('SELECT * FROM societes');
+$resultat = $bdd->query('SELECT * FROM societes LIMIT 5');
 $societe = array();
 while ($donnees = $resultat->fetch())
 {
@@ -59,7 +59,7 @@ $societe[] = $donnees;
 			?>
 			<ol>
 				<?= $row ['id_personne']?>.
-				<a href="detailcontact.php"><?= $row ['nom_personne']?>
+				<a href="<?= "detailcontact.php?contact=".$row['id_personne'];?>"><?= $row ['nom_personne']?>
 				<?= $row ['prenom_personne']?></a>
 			</ol>
 			<?php }
@@ -72,7 +72,7 @@ $societe[] = $donnees;
 			?>
 			<ol>
 				<?= $row ['id_societes']?>.
-				<a href="detailsociete.php"><?= $row ['nom_societe']?></a>
+				<a href="<?= "detailsociete.php?societe=".$row['id_societes'];?>"><?= $row ['nom_societe']?></a>
 			</ol>
 			
 			<?php }
