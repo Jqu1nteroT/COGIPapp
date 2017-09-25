@@ -1,1 +1,0 @@
-detailsociete.php
