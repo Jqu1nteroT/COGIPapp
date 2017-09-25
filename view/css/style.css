@@ -19,3 +19,32 @@ border: 1px solid black;
 .es table{
 margin: auto;
 }
+
+
+@font-face {
+    font-family: "lobster";
+    src: url(../view/fonts/Lobster-Regular.ttf) format("truetype");
+}
+
+body{
+	background-color: #FAFAFA;
+	font-family: "lobster";
+}
+
+/* section header */
+#navi{
+	padding: 0;
+}
+.nav{
+	background-color: #F7F7F9;
+	border-bottom: 1px solid grey;
+	padding-left: 10px;
+}
+/* section accueil */
+.accueil h1{
+	text-align: center;
+}
+
+.accueil p{
+	text-align: justify;
+}
