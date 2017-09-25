@@ -1,0 +1,21 @@
+th{
+border: 1px solid black;
+padding: 0px;
+}
+
+td{
+border: 1px solid black;
+}
+
+.es th{
+border: 1px solid black;
+padding: 0px;
+}
+
+.es td{
+border: 1px solid black;
+}
+
+.es table{
+margin: auto;
+}
