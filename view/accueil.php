@@ -1,29 +1,15 @@
-<section id="header">
+<section id="accueil">
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12" style="text-align: center;">
-				<h1>COGI APP</h1>
-			</div>
-			<div class="col-md-12" style=" border: 1px solid #337AB7;">
-				<ul class="nav nav-pills">
-					<li class="active"><a href="#">Accueil</a></li>
-					<li><a href="#">Personne</a></li>
-					<li><a href="#">Societe</a></li>
-					<li><a href="#">Clients</a></li>
-					<li><a href="#">Fournisseurs</a></li>
-				</ul>
-			</div>
+		<div class="col-md-12 accueil">
+			<h1>Accueil</h1>
+			<p><b>Bonjour Ms. Jean-Christian Ranu</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum aperiam excepturi beatae perferendis, voluptas obcaecati inventore corporis deleniti odit iste, ad incidunt at velit laudantium dolorum, eum officiis numquam itaque!</p>
 		</div>
 	</div>
 </section>
-<section id="body">
+<hr>
+<section id="contenu">
 	
 </section>
-<section id="footer">
-	
-</section>
-<h1>Accueil</h1>
-<p><b>Bonjour Ms. Jean-Christian Ranu</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum aperiam excepturi beatae perferendis, voluptas obcaecati inventore corporis deleniti odit iste, ad incidunt at velit laudantium dolorum, eum officiis numquam itaque!</p>
 <h1>Dernier 5 facture</h1>
 <table>
 	<tr>
