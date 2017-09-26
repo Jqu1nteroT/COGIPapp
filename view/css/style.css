@@ -1,37 +1,37 @@
-th{
-border: 1px solid black;
-padding: 0px;
-}
+/* Body style */
 
-td{
-border: 1px solid black;
-}
-
-.es th{
-border: 1px solid black;
-padding: 0px;
-}
-
-.es td{
-border: 1px solid black;
-}
-
-.es table{
-margin: auto;
-}
-
+@import url('normalize.css');
 
 @font-face {
-    font-family: "lobster";
-    src: url(../view/fonts/Lobster-Regular.ttf) format("truetype");
+    font-family: "Volkon";
+    src: url('fonts/Vollkorn-Regular.ttf');
+}
+
+@font-face {
+    font-family: "VolkonB";
+    src: url('fonts/Vollkorn-Bold.ttf');
+}
+
+html{
+	height: 100%;
+	width: 100%;
 }
 
 body{
 	background-color: #FAFAFA;
-	font-family: "lobster";
+	font-family: "Volkon";
+	font-size: 16px;
+}
+
+h1, h2, h3{
+	font-family: "VolkonB";
 }
 
 /* section header */
+#header{
+	background-color: #D9EDF7;
+}
+
 #navi{
 	padding: 0;
 }
@@ -47,4 +47,189 @@ body{
 
 .accueil p{
 	text-align: justify;
+}
+
+  .link{
+	margin-top: 25%;
+}
+
+.logo{
+	text-align: center;
+	padding: 5px;
+}
+
+/* sction footer */
+
+#footer{
+	background-color: #F5F5F5;
+	height: auto;
+	text-align: center;
+	border-top: 1px solid grey;
+	padding: 0;
+}
+
+.well{
+	margin-bottom: 0;
+}
+/* section facture */
+
+#facture>h1{
+	text-align: center;
+}
+
+#facture>.table>tbody>tr>td{
+	padding-left: 5%;
+}
+
+#facture>.table>tbody>tr:hover{
+	padding-left: 5%;
+	background-color: #DDDDDD;
+}
+
+#facture>p{
+	margin-left: 5%;
+}
+#facture>.well{
+	margin-top: 6.4%;
+}
+
+/* section annuaire */
+
+#annuaire>h1{
+	text-align: center;
+}
+
+#annuaire>.table>tbody>tr>td{
+	padding-left: 5%;
+}
+
+#annuaire>.table>tbody>tr:hover{
+	padding-left: 5%;
+	background-color: #DDDDDD;
+}
+
+#annuaire>p{
+	margin-left: 5%;
+}
+
+/* section client */
+
+#client>h1{
+	text-align: center;
+}
+
+
+#client>.table>tbody>tr>td{
+	padding-left: 5%;
+}
+
+#client>.table>tbody>tr:hover{
+	padding-left: 5%;
+	background-color: #DDDDDD;
+}
+
+#client>p{
+	margin-left: 5%;
+}
+
+#client>.well{
+	margin-top: 12.5%;
+}
+
+/* section fournisseur */
+
+#fournisseur>h1{
+	text-align: center;
+}
+
+
+#fournisseur>.table>tbody>tr>td{
+	padding-left: 5%;
+}
+
+#fournisseur>.table>tbody>tr:hover{
+	padding-left: 5%;
+	background-color: #DDDDDD;
+}
+
+#fournisseur>p{
+	margin-left: 5%;
+}
+
+#fournisseur>.well{
+	margin-top: 15.5%;
+}
+
+/* section Dfacture */
+
+#Dfacture>h1{
+	text-align: center;
+}
+
+#Dfacture>.panel-info>.panel-heading{
+	color: black;
+}
+
+#Dfacture>.table>tbody>tr>td{
+	padding-left: 5%;
+}
+
+/* section Dcontact */
+
+#Dcontact>h1{
+	text-align: center;
+}
+
+#Dcontact>.panel-info>.panel-heading{
+	color: black;
+}
+
+#Dcontact>.table>tbody>tr>td{
+	padding-left: 5%;
+}
+
+/* section Dsociete */
+
+#Dsociete>h1{
+	text-align: center;
+}
+
+#Dsociete>.panel-info>.panel-heading{
+	color: black;
+}
+
+#Dsociete>.container-fluid>.row>.col-md-6>.btn-primary{
+	margin-bottom: 25px;
+}
+
+/* Section footer */
+
+#CR{
+	text-align: center;
+	background-color: #D9EDF7;
+	padding-top: 25px;
+	border-top: 1px solid gray;
+	margin-bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+
+@media (max-width: 990px) {
+	/* Media accueil */
+	.link{
+		margin-top: 0;
+	}
+	#facture>.well{
+		margin-top: 9%;
+	}
+	#client>.well{
+		margin-top: 18%;
+	}
+	#fournisseur>.well{
+		margin-top: 22.5%;
+	}
+	#Dsociete>.container-fluid>.row>.col-md-6>.btn-primary{
+		margin-left: 25px;
+		margin-bottom: 15px;
+	}
 }
