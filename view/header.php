@@ -2,9 +2,12 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="author" content="Juan P Quintero T">
+		<meta name="description" content="APP facturation COGIapp">
 		<title>COGIPapp</title>
-		<link rel="stylesheet" href="view/css/style.css">
 		<link rel="stylesheet" href="view/css/bootstrap.min.css">
+		<link rel="stylesheet" href="view/css/style.css">
+		<link rel="icon" type="image/svg+xml" sizes="100x100" href="view/image/faviCogi.svg">			
 		<script src="view/js/jquery.js"></script>
 		<script src="view/js/bootstrap.min.js"></script>
 	</head>
@@ -12,8 +15,8 @@
 <section id="header">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12" style="text-align: center;">
-				<h1>COGI APP</h1>
+			<div class="col-md-12 logo">
+				<img src="view/image/logoCogi.svg" alt="logo">
 			</div>
 			<div id="navi" class="col-md-12">
 				<ul class="nav nav-pills">
