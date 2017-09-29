@@ -19,8 +19,13 @@ Le travaille ce déjà fini avec un conception simple et un funcionalite complé
 
 ## Screenshots
 
+### Screenshot sans CSS
 ![Premier Screenshot](https://image.noelshack.com/fichiers/2017/39/1/1506334153-screenshot-1.jpg "Premier screenshot sans CSS")
+
+### Screenshot avec CSS
 ![Premier avec CSS Screenshot](https://image.noelshack.com/fichiers/2017/39/5/1506686825-screenshot2.jpg "Premier screenshot avec CSS")
+
+### Screenshot Responsive
 ![Screenshot responsive](https://image.noelshack.com/fichiers/2017/39/5/1506686973-screenshot3.jpg "Screenshot responsive")
 
 ## Auteur
